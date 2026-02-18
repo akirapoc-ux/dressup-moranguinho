@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dress Up Moranguinho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🍓 Dress Up Moranguinho</h1>
+
+  <div class="game-container">
+
+    <div class="character">
+      <img id="body" src="assets/body.png" class="layer">
+
+      <img id="eyes" src="assets/eyes1.png" class="layer">
+      <img id="hair" src="assets/hair1.png" class="layer">
+      <img id="clothes" src="assets/clothes1.png" class="layer">
+      <img id="shoes" src="assets/shoes1.png" class="layer">
+      <img id="accessory" src="assets/accessory1.png" class="layer">
+      <img id="hat" src="assets/hat1.png" class="layer">
+    </div>
+
+    <div class="menu">
+      <h2>✨ Personalizar</h2>
+
+      <button onclick="changeEyes()">👁 Trocar Olhos</button>
+      <button onclick="changeHair()">💇 Trocar Cabelo</button>
+      <button onclick="changeClothes()">👗 Trocar Roupa</button>
+      <button onclick="changeShoes()">👟 Trocar Sapato</button>
+      <button onclick="changeAccessory()">🎀 Trocar Acessório</button>
+      <button onclick="changeHat()">👒 Trocar Chapéu</button>
+
+      <button class="reset" onclick="resetAll()">🔄 Resetar</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+        </html>
