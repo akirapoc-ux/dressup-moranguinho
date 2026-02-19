@@ -1,3 +1,4 @@
+<script src="script.js"></script>
 let eyesIndex = 1;
 let hairIndex = 1;
 let clothesIndex = 1;
