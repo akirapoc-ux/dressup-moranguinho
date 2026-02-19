@@ -1,76 +1,87 @@
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+/* Reset básico e estilo do body */
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(#ffd1dc, #fff);
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe6f0; /* rosa clarinho estilo Moranguinho */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 20px;
 }
 
 h1 {
-  color: #ff2d6f;
-  font-size: 30px;
+  color: #e6005c;
+  margin-top: 20px;
 }
 
+/* Container do jogo */
 .game-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
   margin-top: 20px;
-  flex-wrap: wrap;
 }
 
+/* Área da boneca */
 .character {
-  width: 300px;
-  height: 420px;
   position: relative;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
-  overflow: hidden;
+  width: 400px; /* largura do corpo da boneca */
+  height: 600px; /* altura do corpo da boneca */
 }
 
+/* Todas as camadas */
 .layer {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
+/* Ordem das camadas */
+#body { z-index: 1; }
+#clothes { z-index: 2; }
+#shoes { z-index: 3; }
+#hair { z-index: 4; }
+#eyes { z-index: 5; }
+#accessory { z-index: 6; }
+#hat { z-index: 7; }
+
+/* Menu de botões */
 .menu {
-  background: white;
-  padding: 20px;
-  border-radius: 20px;
-  width: 220px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .menu h2 {
-  color: #ff2d6f;
+  color: #e6005c;
+  margin-bottom: 10px;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: none;
+.menu button {
+  background-color: #ffb3c6;
+  border: 2px solid #e6005c;
   border-radius: 12px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin: 5px 0;
   cursor: pointer;
-  background: #ff7aa2;
-  color: white;
-  font-size: 15px;
-  transition: 0.2s;
+  transition: all 0.2s ease;
 }
 
-button:hover {
-  background: #ff2d6f;
+.menu button:hover {
+  background-color: #e6005c;
 }
 
 .reset {
-  background: #444;
+  background-color: #ff6699;
+  border-color: #b3003a;
 }
 
 .reset:hover {
-  background: black;
+  background-color: #b3003a;
 }
