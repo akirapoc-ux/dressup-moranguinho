@@ -1,66 +1,69 @@
-<script src="script.js"></script>
-let eyesIndex = 1;
+// Índices iniciais
+let eyeIndex = 1;
 let hairIndex = 1;
 let clothesIndex = 1;
 let shoesIndex = 1;
 let accessoryIndex = 1;
 let hatIndex = 1;
 
-const maxEyes = 5;
-const maxHair = 5;
-const maxClothes = 5;
-const maxShoes = 5;
-const maxAccessory = 6;
-const maxHat = 6;
+// Número de opções por categoria
+const eyeTotal = 3;        // olhos1.png, olhos2.png, olhos3.png
+const hairTotal = 3;       // hair1.png, hair2.png, hair3.png
+const clothesTotal = 4;    // clothes1.png, clothes2.png, clothes3.png, clothes4.png
+const shoesTotal = 3;      // shoes1.png, shoes2.png, shoes3.png
+const accessoryTotal = 3;  // accessory1.png, accessory2.png, accessory3.png
+const hatTotal = 6;        // hat1.png, hat2.png, hat3.png, hat4.png, hat5.png, hat6.png
 
+// Funções para trocar as camadas
 function changeEyes() {
-  eyesIndex++;
-  if (eyesIndex > maxEyes) eyesIndex = 1;
-  document.getElementById("eyes").src = `assets/eyes${eyesIndex}.png`;
+  eyeIndex++;
+  if (eyeIndex > eyeTotal) eyeIndex = 1;
+  document.getElementById("eyes").src = `assets/eyes${eyeIndex}.png`;
 }
 
 function changeHair() {
   hairIndex++;
-  if (hairIndex > maxHair) hairIndex = 1;
+  if (hairIndex > hairTotal) hairIndex = 1;
   document.getElementById("hair").src = `assets/hair${hairIndex}.png`;
 }
 
 function changeClothes() {
   clothesIndex++;
-  if (clothesIndex > maxClothes) clothesIndex = 1;
+  if (clothesIndex > clothesTotal) clothesIndex = 1;
   document.getElementById("clothes").src = `assets/clothes${clothesIndex}.png`;
 }
 
 function changeShoes() {
   shoesIndex++;
-  if (shoesIndex > maxShoes) shoesIndex = 1;
+  if (shoesIndex > shoesTotal) shoesIndex = 1;
   document.getElementById("shoes").src = `assets/shoes${shoesIndex}.png`;
 }
 
 function changeAccessory() {
   accessoryIndex++;
-  if (accessoryIndex > maxAccessory) accessoryIndex = 1;
+  if (accessoryIndex > accessoryTotal) accessoryIndex = 1;
   document.getElementById("accessory").src = `assets/accessory${accessoryIndex}.png`;
 }
 
 function changeHat() {
   hatIndex++;
-  if (hatIndex > maxHat) hatIndex = 1;
+  if (hatIndex > hatTotal) hatIndex = 1;
   document.getElementById("hat").src = `assets/hat${hatIndex}.png`;
 }
 
+// Função para resetar tudo
 function resetAll() {
-  eyesIndex = 1;
+  eyeIndex = 1;
   hairIndex = 1;
   clothesIndex = 1;
   shoesIndex = 1;
   accessoryIndex = 1;
   hatIndex = 1;
 
-  document.getElementById("eyes").src = "assets/eyes1.png";
-  document.getElementById("hair").src = "assets/hair1.png";
-  document.getElementById("clothes").src = "assets/clothes1.png";
-  document.getElementById("shoes").src = "assets/shoes1.png";
-  document.getElementById("accessory").src = "assets/accessory1.png";
-  document.getElementById("hat").src = "assets/hat1.png";
+  document.getElementById("eyes").src = `assets/eyes${eyeIndex}.png`;
+  document.getElementById("hair").src = `assets/hair${hairIndex}.png`;
+  document.getElementById("clothes").src = `assets/clothes${clothesIndex}.png`;
+  document.getElementById("shoes").src = `assets/shoes${shoesIndex}.png`;
+  document.getElementById("accessory").src = `assets/accessory${accessoryIndex}.png`;
+  document.getElementById("hat").src = `assets/hat${hatIndex}.png`;
 }
